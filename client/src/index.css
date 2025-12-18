@@ -1,4 +1,28 @@
-:root {
+@import url("https://fonts.googleapis.com/css2?family=poppins:wght@300;500;600;800&family=VT323&display=swap");
+
+:root{
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  background: #f1f1f1;
+  font-family: "poppins";
+}
+
+a{
+  text-decoration: none;
+}
+
+
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +89,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */

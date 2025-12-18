@@ -1,8 +1,9 @@
 import workout from "../models/workoutModel.js";
 
 export const getAllUsers = async (req, res) => {
+  const user_id = req.user._id;
   try {
-    const workoutData = await workout.find().sort({ createdAt: 1 });
+    const workoutData = await workout.find({user_id}).sort({ createdAt: 1 });
     res.status(200).json(workoutData);
   } catch (error) {
     res.status(500).json({ Message: "Internal server error" });
@@ -22,8 +23,10 @@ export const getSingleUser = async (req, res) => {
 };
 
 export const createWorkout = async(req,res)=>{
+  const {title,reps,load} = req.body;
+  const user_id = req.user._id;
   try {
-    const workoutData = new workout(req.body);
+    const workoutData = new workout({title,reps,load,user_id});
     
     await workoutData.save();
 

@@ -1,0 +1,227 @@
+/* .main-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    height: 80vh;
+}
+
+.main-form form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 30%;
+    flex-direction: column;
+    background-color: white;
+    padding: 40px;
+    box-shadow: rgba(50,50,93,0.25) 0px 2px 5px -1px,
+    rgba(0,0, 0,0.3) 0px 1px 3px -1px;
+    border-radius: 10px;
+    gap: 15px;
+}
+
+.main-form form h1{
+    font-size: 35px;
+    font-weight: 300px;
+    color: var(--error);
+}
+
+.main-form form form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-form form .field{
+    width: 100%;
+}
+
+.main-form form label{
+    display: block;
+    font-size: 17px;
+}
+
+.main-form form input{
+    display: block;
+    outline: none;
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+.main-form form button{
+    border: none;
+    background-color: var(--error);
+    color: white;
+    outline: none;
+    padding:  10px 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.main-form form button:hover{
+    transform : scale(1.05);
+} */
+
+
+/* Base layout */
+.main-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  height: 80vh;
+  background-color: #f8f9fa; /* light background for contrast */
+  padding: 20px;
+}
+
+.main-form form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 30%;
+  flex-direction: column;
+  background-color: white;
+  padding: 40px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 10px;
+  gap: 15px;
+}
+
+.main-form form h1 {
+  font-size: 35px;
+  font-weight: 400;
+  color: var(--error);
+}
+
+.main-form form .field {
+  width: 100%;
+}
+
+.main-form form label {
+  display: block;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.main-form form input {
+  display: block;
+  outline: none;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.main-form form button {
+  border: none;
+  background-color: var(--error);
+  color: white;
+  outline: none;
+  padding: 10px 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.main-form form button:hover {
+  transform: scale(1.05);
+  background-color: #c82333; /* slightly darker on hover */
+}
+
+.main-form form p {
+  color: var(--error);
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* ============================ */
+/* 📱 RESPONSIVE STYLES */
+/* ============================ */
+
+/* Tablets (below 1024px) */
+@media (max-width: 1024px) {
+  .main-form form {
+    width: 50%;
+    padding: 30px;
+  }
+
+  .main-form form h1 {
+    font-size: 30px;
+  }
+}
+
+/* Medium screens (below 768px) */
+@media (max-width: 768px) {
+  .main-form {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .main-form form {
+    width: 70%;
+    padding: 25px;
+  }
+
+  .main-form form h1 {
+    font-size: 26px;
+  }
+
+  .main-form form input {
+    font-size: 14px;
+  }
+
+  .main-form form button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+/* Small phones (below 480px) */
+@media (max-width: 480px) {
+  .main-form {
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .main-form form {
+    width: 100%;
+    max-width: 400px;
+    padding: 18px;
+    box-shadow: none; /* cleaner look on small screens */
+  }
+
+  .main-form form h1 {
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .main-form form label {
+    font-size: 14px;
+  }
+
+  .main-form form input {
+    font-size: 14px;
+    padding: 9px;
+  }
+
+  .main-form form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .main-form form p {
+    font-size: 13px;
+    text-align: center;
+  }
+}
