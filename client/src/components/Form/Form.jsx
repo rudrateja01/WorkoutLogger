@@ -14,7 +14,7 @@ const Form = () => {
     e.preventDefault();
     console.log(form);
 
-    const res = await axios.post("http://localhost:4000/api/workouts", form,{
+    const res = await axios.post("https://workoutlogger-backend.onrender.com/api/workouts", form,{
       headers : {
         "Authorization" : `Bearer ${user.token}`
       }
@@ -39,7 +39,7 @@ const Form = () => {
     e.preventDefault();
     const { _id, title, reps, load} = updateForm;
 
-    await axios.patch(`http://localhost:4000/api/workouts/${_id}`,
+    await axios.patch(`https://workoutlogger-backend.onrender.com/api/workouts/${_id}`,
       {title, reps, load},{
       headers : {
         "Authorization" : `Bearer ${user.token}`

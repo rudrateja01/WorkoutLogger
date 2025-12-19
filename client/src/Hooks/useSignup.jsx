@@ -6,7 +6,7 @@ const useSignup = () => {
   const { dispatch } = useAuthContext();
 
   const signup = async(email,password) => {
-    const res = await fetch("http://localhost:4000/api/user/signup",{
+    const res = await fetch("https://workoutlogger-backend.onrender.com/api/user/signup",{
         method : "POST",
         headers : {
             "Content-Type" : "application/json"

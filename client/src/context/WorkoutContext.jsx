@@ -10,7 +10,7 @@ const WorkoutContext = ({children}) => {
 
     // GET REQUEST FUNCTION
     const getWorkouts = async () => {
-    const res = await axios.get("http://localhost:4000/api/workouts",{
+    const res = await axios.get("https://workoutlogger-backend.onrender.com/api/workouts",{
       headers : {
         "Authorization" : `Bearer ${user.token}`
       }
@@ -46,7 +46,7 @@ const WorkoutContext = ({children}) => {
 
   // DELETE REQUEST FUNCTION
   const handleDelete = async (_id)=>{
-    await axios.delete(`http://localhost:4000/api/workouts/${_id}`,{
+    await axios.delete(`https://workoutlogger-backend.onrender.com/api/workouts/${_id}`,{
       headers : {
         "Authorization" : `Bearer ${user.token}`
       }
