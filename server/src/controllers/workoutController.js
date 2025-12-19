@@ -1,6 +1,6 @@
 import workout from "../models/workoutModel.js";
 
-export const getAllUsers = async (req, res) => {
+export const getAllWorkouts = async (req, res) => {
   const user_id = req.user._id;
   try {
     const workoutData = await workout.find({user_id}).sort({ createdAt: 1 });
@@ -10,7 +10,7 @@ export const getAllUsers = async (req, res) => {
   }
 };
 
-export const getSingleUser = async (req, res) => {
+export const GetSingleWorkout = async (req, res) => {
   try {
     const id = req.params.id;
     

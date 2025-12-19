@@ -3,12 +3,12 @@ const router = express.Router();
 
 import authUser from "../middlewares/usermiddleware.js";
 
-import { getAllUsers,getSingleUser,createWorkout, updateWorkout, deleteWorkout } from "../controllers/workoutController.js";
+import { getAllWorkouts,GetSingleWorkout,createWorkout, updateWorkout, deleteWorkout } from "../controllers/workoutController.js";
 
 router.use(authUser);
 
-router.get("/",getAllUsers);
-router.get("/:id",getSingleUser);
+router.get("/",getAllWorkouts);
+router.get("/:id",GetSingleWorkout);
 
 router.post("/", createWorkout)
 router.patch("/:id", updateWorkout);
