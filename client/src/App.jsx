@@ -1,8 +1,6 @@
 import {BrowserRouter as Router,Routes,Route,Navigate} from "react-router-dom";
 import Home from "./pages/Home/Home"
 import Navbar  from "./components/Navbar/Navbar"
-
-import "./App.css";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import { useAuthContext } from "./Hooks/useAuthContext";
